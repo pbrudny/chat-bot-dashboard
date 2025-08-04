@@ -24,7 +24,7 @@ connection = psycopg2.connect(
 cursor = connection.cursor()
 
 # Execute a SELECT query
-cursor.execute("SELECT * FROM n8n_chat_histories;")
+cursor.execute("SELECT * FROM n8n_chat_histories LIMIT 5;")
 
 rows = cursor.fetchall()
 
